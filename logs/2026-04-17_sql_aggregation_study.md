@@ -4,14 +4,14 @@
 - `events(event_id, user_id, event_name, event_date)`
 - `orders(order_id, user_id, category, order_amount, order_date)`
 
-
+#############
 1. 성별 별 유저 수 (⭕️)
 
 [내 답안]
 SELECT gender, COUNT(*)
 FROM users
 GROUP BY gender;
-
+#############
 
 
 2. 20대 성별별 유저 수 (⭕️)
