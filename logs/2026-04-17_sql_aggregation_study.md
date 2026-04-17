@@ -1,20 +1,20 @@
-가정 테이블:
+#가정 테이블:
 
 - `users(user_id, gender, signup_date, age)`
 - `events(event_id, user_id, event_name, event_date)`
 - `orders(order_id, user_id, category, order_amount, order_date)`
 
-#############
-1. 성별 별 유저 수 (⭕️)
+
+#1. 성별 별 유저 수 (⭕️)
 
 [내 답안]
 SELECT gender, COUNT(*)
 FROM users
 GROUP BY gender;
-#############
 
 
-2. 20대 성별별 유저 수 (⭕️)
+
+#2. 20대 성별별 유저 수 (⭕️)
 
 [내 답안]
 SELECT gender, COUNT(*)
@@ -24,7 +24,7 @@ GROUP BY gender;
 
 
 
-3. 이벤트별 유저 수 (❌)
+#3. 이벤트별 유저 수 (❌)
 
 [내 답안]
 SELECT event_name, count(user_id)
@@ -47,7 +47,7 @@ GROUP BY event_name;
 이벤트별 발생 건수를 구할 때는 COUNT(*)를 쓴다.
 
 
-4. 이벤트별 유저 수 많은 순 정렬 (⭕️)
+#4. 이벤트별 유저 수 많은 순 정렬 (⭕️)
 
 SELECT event_name, count(user_id)
 FROM events
@@ -55,7 +55,7 @@ GROUP BY event_name
 ORDER BY count(user_id), DESC;
 
 
-5. 카테고리별 평균 주문금액
+#5. 카테고리별 평균 주문금액
 
 SELECT category, AVG(order_amount) AS avg_am
 FROM orders
@@ -63,7 +63,7 @@ GROUP BY category;
 
 
 
-6. 카테고리별 최대 주문금액 (⭕️)
+#6. 카테고리별 최대 주문금액 (⭕️)
    
 SELECT category, MAX(order_amount) AS MAX_am
 FROM orders
