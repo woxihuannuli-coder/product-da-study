@@ -3,7 +3,6 @@
 
 주요 함수: DATETIME, DATE, DATETIME_TRUNC, EXTRACT
 
-1. 기본 변환 및 추출
 문제 1. event_time을 KST 기준 DATETIME으로 변환
 
 SQL
